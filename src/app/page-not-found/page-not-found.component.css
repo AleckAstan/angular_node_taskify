@@ -1,4 +1,4 @@
-.body{
+.body {
     width: 50%;
     height: 100%;
     display: block;
@@ -8,7 +8,6 @@
     text-align: center;
 }
 
-.informationMessage{
-    font-family: monospace;
+.informationMessage {
     text-align: center;
-  }
+}
