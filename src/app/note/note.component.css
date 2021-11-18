@@ -7,38 +7,35 @@
     text-overflow: ellipsis;
     white-space: initial;
     word-wrap: break-word;
-  }
+}
 
-  .task-form{
+.task-form {
     width: 100%;
-  }
+}
 
-  .mat-form-field{
+.mat-form-field {
     display: block;
     position: relative;
     text-align: left;
-  }
+}
 
-  .mat-radio-button {
+.mat-radio-button {
     padding: 10px
-  }
+}
 
-  .buttons{
+.buttons {
     padding: 15px
-  }
+}
 
-  .edit-button{
+.edit-button {
     float: right;
-  }
+}
 
-  .custom-input-form{
+.custom-input-form {
     display: block;
     flex-direction: column;
     max-width: 800px;
     margin: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: initial;
     word-wrap: break-word;
-  }
-
+}

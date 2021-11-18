@@ -1,34 +1,33 @@
 .container {
     width: 100%;
     height: 100%;
-  }
-  
+}
+
 .sidenav-content {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
- }
- 
+}
+
 .sidenav {
-padding: 20px;
- }
+    padding: 20px;
+}
 
 .spacer {
     flex: 1 1 auto;
- }
+}
 
- .heading-bar{
+.heading-bar {
     flex: 1 1 auto;
     text-align: center;
-  }
+}
 
-  .main-bar{
-      justify-content: center;
-  }
+.main-bar {
+    justify-content: space-around;
+}
 
-
-  .main-bar-items{
-    width: 10%;
-    
-  }
+.main-bar-items {
+    width: 20%;
+    color: whitesmoke;
+}

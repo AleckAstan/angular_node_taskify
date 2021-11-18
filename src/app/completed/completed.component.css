@@ -4,12 +4,13 @@
 }
 
 .display_card {
-    width: 300px;
+    width: 350px;
     display: grid;
     text-align: center;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-top: 5px;
+    margin: 0.5rem;
+    background-color: rgb(245, 245, 245);
+    -webkit-box-shadow: 10px 11px 15px -15px rgba(0, 0, 0, 0.72);
+    box-shadow: 10px 11px 15px -15px rgba(0, 0, 0, 0.72);
 }
 
 .card_note {
@@ -18,6 +19,8 @@
 
 .header_toolbar {
     height: 45px;
+    display: flex;
+    justify-content: center;
 }
 
 .card_content_wrapper {

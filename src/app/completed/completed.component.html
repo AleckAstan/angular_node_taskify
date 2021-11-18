@@ -1,8 +1,8 @@
 <!--  TITLE  -->
-<mat-toolbar class="header_toolbar" color="primary">Completed Tasks</mat-toolbar>
+<mat-toolbar class="header_toolbar" color="accent">Completed Tasks</mat-toolbar>
 <mat-accordion multi="true" *ngIf="tasks.length > 0">
     <div class="container">
-        <mat-grid-list cols="3" rowHeight="300px">
+        <mat-grid-list cols="3" rowHeight="350px">
             <mat-grid-tile *ngFor="let task of tasks">
                 <mat-card class="display_card">
                     <mat-card-header>

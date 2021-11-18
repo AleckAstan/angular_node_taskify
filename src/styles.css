@@ -1,12 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-html,
-body {
-    height: 100%;
-}
-
 * {
     margin: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-color: #0093e9;
+    background-image: linear-gradient(90deg, #0093e9 0%, #80d0c7 100%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.small {
+    margin-top: 1rem;
+    max-width: 70vw;
+    max-height: 78vh;
+    min-height: 78vh;
+    min-width: 70vw;
+    border-radius: 1rem;
+    -webkit-box-shadow: 5px 8px 13px -4px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 8px 13px -4px rgba(0, 0, 0, 0.5);
+    background: rgb(255, 255, 255);
+    overflow-y: scroll;
+}
+
+.app-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading-bar {
+    font-size: 3rem;
+}
+
+.owners {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big {
+    overflow-y: scroll;
+}
+
+.headerTop {
+    color: white;
 }

@@ -1,18 +1,34 @@
-<base href="/view">
-<mat-drawer-container class="container" autosize>
-  <!-- Heading Bar -->
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span class="heading-bar">Tasks Manager</span>
-    </mat-toolbar-row>
-    <!-- Navigation button -->
-    <mat-toolbar-row class="main-bar">
-      <button class="main-bar-items" mat-button [routerLink]="['/today']">Today's Tasks</button>
-      <button class="main-bar-items" mat-button (click)="openDialog()" color="Warn">Create</button>
-      <button class="main-bar-items" mat-button [routerLink]="['/']">View Tasks</button>
-      <button class="main-bar-items" mat-button [routerLink]="['/completed']">Completed Tasks</button>
-    </mat-toolbar-row>
-  </mat-toolbar>
+<base href="/view" />
 
-  <router-outlet></router-outlet>
-</mat-drawer-container>
+<span class="heading-bar">Taskify</span>
+<div class="small">
+    <mat-drawer-container class="container" autosize>
+        <div class="headerTop">
+            <!-- Heading Bar -->
+            <mat-toolbar color="primary">
+                <!-- Navigation button -->
+                <mat-toolbar-row class="main-bar">
+                    <button class="main-bar-items" mat-button [routerLink]="['/today']">
+            Today's Tasks
+          </button>
+                    <button class="main-bar-items" mat-button (click)="openDialog()" color="Warn">
+            Create
+          </button>
+                    <button class="main-bar-items" mat-button [routerLink]="['/']">
+            View Tasks
+          </button>
+                    <button class="main-bar-items" mat-button [routerLink]="['/completed']">
+            Completed Tasks
+          </button>
+                </mat-toolbar-row>
+            </mat-toolbar>
+        </div>
+        <div class="mainContent">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-container>
+</div>
+<div class="owners">
+    <h6 class="owner">RABARINIRINA Antsa Judicaël IMTICIA3 n°09</h6>
+    <h6 class="owner">RATSIMBAZAFY Rijaniriana Mananarivo IMTICIA3 n°10</h6>
+</div>
