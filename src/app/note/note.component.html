@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>NOTE</h1>
+<div mat-dialog-content>
+  <textarea name="note" ngModel={{tasksData.note}} #note="ngModel" rows="10" cols="50"></textarea>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Exit</button>
+  <button class="edit-button" mat-button (click)="onUpdate(note.viewModel)">Update note</button>
+</div>

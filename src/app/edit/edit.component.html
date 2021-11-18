@@ -1,0 +1,37 @@
+<div class="content" *ngIf="task && task.length > 0">
+  <!-- *ngIf="arr && arr.length > 0" is used to stop undefined at the moment of the template rendering -->
+  <!--  TITLE  -->
+  <h2 mat-dialog-title>Edit task</h2>
+  <!--  FORM  -->
+  <form class="task-form" (submit)="onEditPost(postForm)" #postForm="ngForm">
+
+    <mat-form-field>
+      <label>
+        <input matInput type="text" name="task_name" ngModel={{task[0].task_name}} required minlength="3" #task_name="ngModel">
+      </label>
+      <mat-error *ngIf="task_name.invalid">Please enter a name for the task.</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <label>
+        <input matInput type="text" name="note" ngModel={{task[0].note}} #note="ngModel">
+      </label>
+    </mat-form-field>
+
+    <mat-radio-group name="priority" ngModel="{{task[0].priority}}" #priority="ngModel">
+      <p>Priority:</p>
+      <mat-radio-button name="priority" value='1'>!</mat-radio-button>
+      <mat-radio-button name="priority" value="2">!!</mat-radio-button>
+      <mat-radio-button name="priority" value="3">!!!</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field>
+      <input matInput name="date" [matDatepicker]="picker" placeholder="Choose a date" format="dd-MM-yyyy" ngModel="{{task[0].date}}"
+        #date="ngModel" maxlength="10">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" type="submit" [disabled]="!postForm.form.valid">Update Post</button>
+  </form>
+</div>

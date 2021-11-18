@@ -1,0 +1,25 @@
+.content{
+    display: block;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.task-form{
+    width: 100%;
+  }
+
+  .mat-form-field{
+    display: block;
+    position: relative;
+    text-align: left;
+  }
+
+  .mat-radio-group{
+    display: block;
+    padding-bottom: 1.25em;
+  }
+
+  .mat-dialog-title {
+    display: block;
+}

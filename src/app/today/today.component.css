@@ -1,0 +1,93 @@
+.container {
+    height: auto;
+    margin: 3%;
+      
+    }
+  
+    .display_card{
+      width: 300px;
+      display: grid;
+      text-align: center;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-top: 5px;
+    }
+  
+    .mat-card-header {
+      display: block;
+      flex-direction: row;
+  }
+  
+  .mat-card-content {
+    height: auto;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    word-wrap: break-word;
+    display: block;
+    margin-bottom: 0;
+  }
+  
+  .mat-radio-button {
+    padding-right: 2px;
+  }
+  
+  .card_note{
+    height: auto;
+  }
+  
+  .header_toolbar{
+    height: 45px;
+  }
+  
+  .card_content_wrapper{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas: 
+    "a b"
+    "c d";
+    align-items: start;
+  }
+  
+  .top_left_card_grid {
+    grid-area: a;
+  }
+  .top_right_card_grid {
+    grid-area: b;
+  }
+  
+  .bottom_left_card_grid {
+    grid-area: c;
+  }
+  .bottom_right_card_grid {
+    grid-area: d;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+  
+  .custom_p{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: normal;
+  }
+  
+  .complete-button{
+     margin: 0;
+  }
+  
+  .mat-card-actions .mat-button, .mat-card-actions .mat-raised-button {
+     margin: 0;
+  }
+
+  .informationMessage{
+    font-family: monospace;
+    text-align: center;
+  }

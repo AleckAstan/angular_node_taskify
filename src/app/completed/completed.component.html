@@ -1,0 +1,63 @@
+<!--  TITLE  -->
+<mat-toolbar class="header_toolbar" color="primary">Completed Tasks</mat-toolbar>
+<mat-accordion multi="true" *ngIf="tasks.length > 0">
+    <div class="container">
+        <mat-grid-list cols="3" rowHeight="300px">
+            <mat-grid-tile *ngFor="let task of tasks">
+                <mat-card class="display_card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{ task.task_name }}
+                            <i style="float: right" class="material-icons">
+                done_outline
+              </i> </mat-card-title><br />
+                    </mat-card-header>
+
+                    <mat-card-content>
+                        <div class="card_content_wrapper">
+                            <mat-divider></mat-divider>
+                            <mat-list-item class="top_left_card_grid">
+                                <h4>Date:</h4>
+                            </mat-list-item>
+                            <mat-list-item class="top_right_card_grid">
+                                <div class="custom_p_date">
+                                    <p>{{ task.date }}</p>
+                                </div>
+                            </mat-list-item>
+
+                            <mat-list-item class="bottom_left_card_grid">
+                                <h4>Priority:</h4>
+                            </mat-list-item>
+
+                            <mat-list-item class="bottom_right_card_grid">
+                                <mat-radio-group ngModel="{{ task.priority }}" disabled="true">
+                                    <mat-radio-button name="priority1" value="1">!</mat-radio-button>
+                                    <mat-radio-button name="priority2" value="2">!!</mat-radio-button>
+                                    <mat-radio-button name="priority3" value="3">!!!</mat-radio-button>
+                                </mat-radio-group>
+                            </mat-list-item>
+                        </div>
+
+                        <mat-list-item>
+                            <button mat-button color="accent" (click)="openDialog(task._id, task.note)">
+                NOTE
+              </button>
+                        </mat-list-item>
+                    </mat-card-content><br />
+
+                    <mat-card-actions>
+                        <button mat-button color="warn" (click)="onDelete(task._id)">
+              DELETE
+            </button>
+                        <button mat-button class="complete-button" color="accent" (click)="onUnComplete(task._id)">
+              UNCOMPLETED
+            </button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</mat-accordion>
+<h2 class="informationMessage" *ngIf="tasks.length <= 0">
+    Either no tasks in the database or marked complete
+</h2>

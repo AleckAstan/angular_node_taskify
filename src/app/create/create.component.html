@@ -1,0 +1,42 @@
+<div mat-dialog-content>
+  <!--  TITLE  -->
+  <h2 mat-dialog-title>Add a task</h2>
+  <!--  FORM  -->
+  <form class="task-form" (submit)="onAddTask(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <label>
+        <input matInput type="text" name="task_name" placeholder="Taskname" ngModel required minlength="3" #task_name="ngModel">
+      </label>
+      <mat-error *ngIf="task_name.invalid">Please enter a name for the task.</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <label>
+        <input matInput type="text" name="note" placeholder="Note" ngModel #note="ngModel">
+      </label>
+    </mat-form-field>
+
+    <mat-radio-group name="priority" ngModel #priority="ngModel">
+      <p>Priority:</p>
+      <mat-radio-button name="priority" value='1'>!</mat-radio-button>
+      <mat-radio-button name="priority" value="2">!!</mat-radio-button>
+      <mat-radio-button name="priority" value="3">!!!</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field>
+      <label>
+        <input matInput name="date" [matDatepicker]="picker" placeholder="Choose a date" format="dd-MM-yyyy" ngModel
+          #date="ngModel" maxlength="10">
+      </label>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!--  FORM ACTION BUTTONS  -->
+    <div class="buttons">
+      <button mat-button color="accent" mat-dialog-close>Close</button>
+      <button class="submit-button" mat-raised-button color="accent" type="submit" [disabled]="!postForm.form.valid">Save
+        Task</button>
+    </div>
+  </form>
+</div>

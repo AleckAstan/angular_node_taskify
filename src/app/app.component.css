@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    height: 100%;
+  }
+  
+.sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+.sidenav {
+padding: 20px;
+ }
+
+.spacer {
+    flex: 1 1 auto;
+ }
+
+ .heading-bar{
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .main-bar{
+      justify-content: center;
+  }
+
+
+  .main-bar-items{
+    width: 10%;
+    
+  }

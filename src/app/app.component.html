@@ -1,0 +1,18 @@
+<base href="/view">
+<mat-drawer-container class="container" autosize>
+  <!-- Heading Bar -->
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="heading-bar">Tasks Manager</span>
+    </mat-toolbar-row>
+    <!-- Navigation button -->
+    <mat-toolbar-row class="main-bar">
+      <button class="main-bar-items" mat-button [routerLink]="['/today']">Today's Tasks</button>
+      <button class="main-bar-items" mat-button (click)="openDialog()" color="Warn">Create</button>
+      <button class="main-bar-items" mat-button [routerLink]="['/']">View Tasks</button>
+      <button class="main-bar-items" mat-button [routerLink]="['/completed']">Completed Tasks</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+</mat-drawer-container>
