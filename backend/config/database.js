@@ -1,5 +1,4 @@
-// Connection to mLabs database.
 module.exports = {
-    'secret': 'meansecure',
-    'database': 'mongodb://localhost/foo'
+    secret: "meansecure",
+    database: "mongodb://localhost/foo",
 };
