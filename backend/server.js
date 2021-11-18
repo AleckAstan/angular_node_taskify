@@ -22,7 +22,7 @@ const server = app.listen(8081, function() {
     let host = server.address().address;
     let port = server.address().port;
 
-    console.log("Example app listening at http://%s:%s", host, port);
+    console.log("App listening at http://%s:%s", host, port);
 });
 
 module.exports = app;
